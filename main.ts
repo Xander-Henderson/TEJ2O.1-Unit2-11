@@ -17,18 +17,27 @@ randomNumberTwo = randint(0, 99)
 
 // show number 1
 input.onButtonPressed(Button.A, function() {
+    basic.clearScreen()
     basic.showNumber(randomNumberOne)
+    basic.clearScreen()
 })
 
 // show number 2
 input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
     basic.showNumber(randomNumberTwo)
+    basic.clearScreen()
 })
 
 // show either one
-if (randomNumberOne > randomNumberTwo) {
-    basic.showNumber(randomNumberOne)
-} else {
-    basic.showNumber(randomNumberTwo)
-}
-
+input.onGesture(Gesture.Shake, function() {
+    if (randomNumberOne > randomNumberTwo) {
+        basic.clearScreen()
+        basic.showNumber(randomNumberOne)
+        basic.clearScreen()
+    } else {
+        basic.clearScreen()
+        basic.showNumber(randomNumberTwo)
+        basic.clearScreen()
+    }
+})
