@@ -1,8 +1,34 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Alexander
+ * Created on: Oct 2025
+ * This program shows a random number between 0 and 99
 */
 
-basic.showString('Hello, World!')
+// setup
+let randomNumberOne: number = 0
+let randomNumberTwo: number = 0
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+// chose the random numbers
+randomNumberOne = randint(0, 99)
+randomNumberTwo = randint(0, 99)
+
+// show number 1
+input.onButtonPressed(Button.A, function() {
+    basic.showNumber(randomNumberOne)
+})
+
+// show number 2
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(randomNumberTwo)
+})
+
+// show either one
+if (randomNumberOne > randomNumberTwo) {
+    basic.showNumber(randomNumberOne)
+} else {
+    basic.showNumber(randomNumberTwo)
+}
+
