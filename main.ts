@@ -33,11 +33,11 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function() {
     if (randomNumberOne > randomNumberTwo) {
         basic.clearScreen()
-        basic.showNumber(randomNumberOne)
+        basic.showString("#1:" + randomNumberOne.toString())
         basic.clearScreen()
     } else {
         basic.clearScreen()
-        basic.showNumber(randomNumberTwo)
+        basic.showString("#2:" + randomNumberTwo.toString())
         basic.clearScreen()
     }
 })
