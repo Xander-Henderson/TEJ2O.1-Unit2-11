@@ -18,14 +18,14 @@ randomNumberTwo = randint(0, 99)
 // show number 1
 input.onButtonPressed(Button.A, function() {
     basic.clearScreen()
-    basic.showNumber(randomNumberOne)
+    basic.showString("#1:" + randomNumberOne.toString())
     basic.clearScreen()
 })
 
 // show number 2
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
-    basic.showNumber(randomNumberTwo)
+    basic.showString("#2:" + randomNumberTwo.toString())
     basic.clearScreen()
 })
 
